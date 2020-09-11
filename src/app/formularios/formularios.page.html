@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>formularios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="addForm(nuevoNombre, nuevoApellido, nuevaEdad, nuevoLugar, nuevoHombre, nuevaCedula, 
+  nuevoSintoma, nuevoAntecedente, nuevoCovid)">
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre y Apellido</ion-label>
+      <ion-input type="text" class="form-control" #nuevoNombre required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" class="form-control" #nuevoApellido required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input type="text" class="form-control" #nuevaEdad required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Lugares visitados</ion-label>
+      <ion-input type="text" class="form-control" #nuevoLugar required></ion-input>
+    </ion-item>
+
+  
+    <ion-item lines="full">
+      <ion-label >Sexo</ion-label>
+    <p>
+      <ion-label >hombre</ion-label>
+    </p>
+    <p>
+    <ion-checkbox #nuevoHombre slot="end">  </ion-checkbox>
+    </p>
+    <p>
+    <ion-label slot="end" >mujer</ion-label>
+  </p>
+    
+     <ion-checkbox></ion-checkbox>
+  
+    </ion-item>
+    
+      
+
+    <ion-item lines="full">
+      <ion-label position="floating">Cedula</ion-label>
+      <ion-input type="text" class="form-control" #nuevaCedula required></ion-input>
+    </ion-item> 
+
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Sintomas presentados <br> los ultimos 7 dias
+        días?</ion-label>
+      <ion-input type="text" class="form-control" #nuevoSintoma required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Antecedentes propios?</ion-label>
+      <ion-input type="text" class="form-control" #nuevoAntecedente required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Cree que tiene covid?</ion-label>
+      <ion-input type="text" class="form-control" #nuevoCovid required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

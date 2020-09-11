@@ -1,0 +1,16 @@
+<ion-card>
+  <ion-card-header color="secondary" >
+    <ion-card-title color="secondary"> {{ task.nombre }}  {{ task.apellido }} </ion-card-title>
+    <ion-button color="dark" (click)="task.hide = !task.hide">Mostrar</ion-button>
+    <ion-button color="danger" (click)="deleteTask(task)">Eliminar</ion-button>
+
+
+   
+  </ion-card-header >
+  <ion-card-content  color="danger" [hidden]="task.hide">  Edad: {{ task.edad }} </ion-card-content>
+  <ion-card-content color="danger" [hidden]="task.hide">  Lugares visitados: {{ task.lugar }} </ion-card-content>
+  <ion-card-content color="danger" [hidden]="task.hide">  Cedula: {{ task.cedula }} </ion-card-content>
+  <ion-card-content color="danger" [hidden]="task.hide">  Sintomas: {{ task.sintomas }} </ion-card-content>
+  <ion-card-content color="danger" [hidden]="task.hide">  Antecedentes: {{ task.antecedente }} </ion-card-content>
+  <ion-card-content color="danger" [hidden]="task.hide">  Tiene Covid: {{ task.covid }} </ion-card-content>
+</ion-card>

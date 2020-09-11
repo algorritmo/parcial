@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AppCovid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+  <form #form='ngForm' (ngSubmit)="loginUser(form)">
+    <div>
+      <ion-item>
+        <ion-input name="email" type="email" placeholder="tu@email.com" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" type="password" placeholder="password" ngModel required></ion-input>
+      </ion-item>
+    </div>
+    <div style="text-align: center;margin: auto;">
+      <ion-button type="submit" [disabled]="form.invalid">Sign in</ion-button>
+    </div>
+  </form>
+  <div style="text-align: center;margin: auto;">
+    <span class="divider line one-line">or</span>
+    <ion-button  (click)="goToReset()" expand="block" color="danger">Olvido Su Contraseña</ion-button >
+    <ion-button  (click)="goTosignUp()" expand="block" color="danger">Registrarse</ion-button >
+  </div>
+  </ion-grid>
+</ion-content>
